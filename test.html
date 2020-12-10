@@ -1,0 +1,27 @@
+  
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+{% block body %}
+<h2>{{tetle}}</h2>
+<h3>{{tetle_title}}</h3>
+<table border="1">
+    <th>Name</th>
+    <th>Cwid</th>
+    <th>Course</th>
+    <th>Grade</th>
+    <th>Instructor</th>
+    {% for student in students %}
+    <tr>
+        <td>{{student.Name}}</td>
+        <td>{{student.Cwid}}</td>
+        <td>{{student.Course}}</td>
+        <td>{{student.Grade}}</td>
+        <td>{{student.Instructor}}</td>
+    </tr>
+
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}
